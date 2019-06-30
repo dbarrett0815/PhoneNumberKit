@@ -14,6 +14,9 @@ import CoreTelephony
 public typealias MetadataCallback = (() throws -> Data?)
 
 public final class PhoneNumberKit: NSObject {
+	
+    // shared instance. To help boost performance
+    public static let sharedInstance = PhoneNumberKit()
 
     // Manager objects
     let metadataManager: MetadataManager
